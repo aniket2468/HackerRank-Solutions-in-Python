@@ -1,12 +1,12 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 from collections import *
-N= input()
+N= int(input())
 d= OrderedDict()
 for i in range(N):
-    item = raw_input().split()
+    item = input().split()
     itemPrice= int(item[-1])
     itemName= " ".join(item[:-1])
-    if d.get(itemName):                      # .get is used to check if itemName already exists
+    if d.get(itemName):
        d[itemName] += itemPrice
     else:
        d[itemName] = itemPrice
